@@ -1,0 +1,46 @@
+"dbms","table_catalog","table_schema","table_name","column_name","ordinal_position","data_type","character_maximum_length","constraint_type","table_schema-2","table_name-2","column_name-2"
+"postgresql","covid19_tracker","public","participant","p_id",1,"character varying",10,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","covid19_tracker","public","test_centre","tc_centre_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","covid19_tracker","public","place","place_id",1,"character varying",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","covid19_tracker","public","visits","visit_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","covid19_tracker","public","visits","place_id",5,"character varying",10,"FOREIGN KEY","public","place","place_id"
+"postgresql","covid19_tracker","public","visits","p_id",6,"character varying",10,"FOREIGN KEY","public","participant","p_id"
+"postgresql","covid19_tracker","public","contact","contact_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","covid19_tracker","public","visits_contact","contact_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","covid19_tracker","public","visits_contact","visit_id",2,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","covid19_tracker","public","visits_contact","contact_id",1,"integer",NULL,"FOREIGN KEY","public","contact","contact_id"
+"postgresql","covid19_tracker","public","visits_contact","visit_id",2,"integer",NULL,"FOREIGN KEY","public","visits","visit_id"
+"postgresql","covid19_tracker","public","covid_tests","t_test_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","covid19_tracker","public","covid_tests","p_id",5,"character varying",10,"FOREIGN KEY","public","participant","p_id"
+"postgresql","covid19_tracker","public","covid_tests","tc_centre_id",6,"integer",NULL,"FOREIGN KEY","public","test_centre","tc_centre_id"
+"postgresql","covid19_tracker","public","place","place_address_line",4,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","covid19_tracker","public","place","place_postal_code",7,"character varying",20,NULL,NULL,NULL,NULL
+"postgresql","covid19_tracker","public","contact","contact_phone_no",4,"character varying",20,NULL,NULL,NULL,NULL
+"postgresql","covid19_tracker","public","contact","contact_fname",2,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","covid19_tracker","public","test_centre","tc_city_name",4,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","covid19_tracker","public","place","place_city_name",5,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","covid19_tracker","public","participant","p_county",8,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","covid19_tracker","public","visits","v_time_of_visit",3,"time without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","covid19_tracker","public","place","place_name",2,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","covid19_tracker","public","covid_tests","t_test_status",2,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","covid19_tracker","public","visits","v_min_duration_visit",4,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","covid19_tracker","public","test_centre","tc_postal_code",5,"character varying",20,NULL,NULL,NULL,NULL
+"postgresql","covid19_tracker","public","participant","p_lname",3,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","covid19_tracker","public","place","place_location_type",3,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","covid19_tracker","public","participant","p_postal_code",9,"character varying",20,NULL,NULL,NULL,NULL
+"postgresql","covid19_tracker","public","participant","p_city_name",7,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","covid19_tracker","public","place","place_country",8,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","covid19_tracker","public","covid_tests","t_test_date",4,"date",NULL,NULL,NULL,NULL,NULL
+"postgresql","covid19_tracker","public","place","place_county",6,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","covid19_tracker","public","test_centre","tc_country",7,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","covid19_tracker","public","test_centre","tc_address_line",3,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","covid19_tracker","public","participant","p_address_line",6,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","covid19_tracker","public","test_centre","tc_centre_name",2,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","covid19_tracker","public","covid_tests","t_variant",3,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","covid19_tracker","public","participant","p_dob",5,"date",NULL,NULL,NULL,NULL,NULL
+"postgresql","covid19_tracker","public","participant","p_phone_no",4,"character varying",20,NULL,NULL,NULL,NULL
+"postgresql","covid19_tracker","public","visits","v_date_of_visit",2,"date",NULL,NULL,NULL,NULL,NULL
+"postgresql","covid19_tracker","public","test_centre","tc_county",6,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","covid19_tracker","public","contact","contact_lname",3,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","covid19_tracker","public","participant","p_fname",2,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","covid19_tracker","public","participant","p_country",10,"character varying",50,NULL,NULL,NULL,NULL
